@@ -1,0 +1,180 @@
+.main_sidebar {
+    width: 266px;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    background: #1B1D2D;
+    padding-top: 25px;
+    &_header {
+        box-sizing: border-box;
+        padding-right: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 20px 0px 46px;
+        &_logo {
+            display: flex;
+            align-items: center;
+            & span {
+                font-family: 'Inter', sans-serif;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 22px;
+                text-transform: uppercase;
+                color: #FFFFFF;
+            }
+            & img {
+                margin: 0px 7px;
+            }
+        }
+    }
+    &_nav {
+        margin-top: 34px;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0px;
+            top: -12px;
+            width: 100%;
+            height: 1px;
+            background-color: #373A52;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0px;
+            bottom: -30px;
+            width: 100%;
+            height: 1px;
+            background-color: #373A52;
+        }
+        & ul {
+            & li {
+                box-sizing: border-box;
+                padding: 16px 0px 16px 46px;
+                cursor: pointer;
+                margin-top: 20px;
+                position: relative;
+                &::after {
+                    content: "";
+                    width: 4px;
+                    height: 100%;
+                    background-color: #3D55D7;
+                    position: absolute;
+                    left: 0px;
+                    top: 0px;
+                    display: none;
+                }
+                & a {
+                    display: flex;
+                    align-items: flex-end;
+                    & span {
+                        font-family: 'Raleway', sans-serif;
+                        font-weight: 400;
+                        font-size: 15px;
+                        line-height: 18px;
+                        color: #FFFFFF;
+                    }
+                    & img {
+                        margin-right: 7px;
+                    }
+                }
+                &.active {
+                    background: #3E4360;
+                    &::after {
+                        display: block;
+                    }
+                }
+                &.close {
+                    & a {
+                        color: #454863;
+                    }
+                }
+            }
+        }
+    }
+    &_add {
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: 70px;
+        & span {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 18px;
+            color: #3D55D7;
+            text-decoration: underline;
+        }
+        & img {
+            width: 18px;
+            margin-left: 15px;
+        }
+    }
+    &_help {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        & span {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 18px;
+            color: #BABCCC;
+            text-decoration: underline;
+        }
+        & img {
+            margin-left: 15px;
+        }
+    }
+    &.hide {
+        width: 70px;
+        & .main_sidebar_header {
+            padding: 0px 20px 0px 25px;
+            &_logo {
+                & img {
+                    margin: 0px;
+                }
+                & span {
+                    display: none;
+                }
+            }
+            &_collapse {
+                display: none;
+            }
+        }
+        & .main_sidebar_nav {
+            & ul {
+                & li {
+                    padding: 16px 0px 16px 25px;
+                    & a {
+                        & span {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        & .main_sidebar_add {
+            & span {
+                display: none;
+            }
+            & img {
+                margin-left: 0px;
+            }
+        }
+        & .main_sidebar_help {
+            & span {
+                display: none;
+            }
+            & img {
+                margin-left: 0px;
+            }
+        }
+    }
+}

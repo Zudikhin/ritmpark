@@ -1,3 +1,14 @@
-h1 {
-    color: white;
+.main {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    &_content {
+        width: calc(100% - 266px);
+    }
+    &.open {
+        & .main_content {
+            width: calc(100% - 70px);
+        }
+    }
 }
